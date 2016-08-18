@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Header.h"
 
 @protocol AlbumCtrlDelegate <NSObject>
 

@@ -9,7 +9,6 @@
 #import "SCAlbum.h"
 #import "SDWebImageManager.h"
 #import <UIImageView+WebCache.h>
-#import "RootViewController.h"
 
 @implementation SCAlbum
 {
@@ -53,7 +52,7 @@
         [img addGestureRecognizer:fullScreenTap];
         [self scrollViewDidEndDecelerating:self];
     }
-    _pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, height-15, screenWidth, 20)];
+    _pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, height-15, [UIScreen mainScreen].bounds.size.width, 20)];
     _pageControl.numberOfPages = (_myImgURLArr.count? _myImgURLArr.count:1);
     _pageControl.backgroundColor = [UIColor clearColor];
     _pageControl.currentPage = 0;
